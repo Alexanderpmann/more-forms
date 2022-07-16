@@ -69,6 +69,7 @@ const ConfirmPasswordValid = input => {
     return true;
 }
 
+// Need to implement 'canRender' to hide alters on page - for alters to then trigger on submission
 
     return (
         <div style={formStyle}>
