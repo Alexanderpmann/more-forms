@@ -21,9 +21,16 @@ const Form = props => {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [confPass, setconfPass] = useState("");
+
+const createUser = (e) => {
+    e.preventDefault();
+    const newUser = { firstName, lastName, email, password };
+    console.log("Welcome", newUser);
+};
+
     return (
         <div style={formStyle}>
-            <form action="">
+            <form onSubmit={ createUser }>
                 <div>
                     <label htmlFor="firstName">First Name: </label>
                     <input type="text" name="firstName" id="firstName" onChange={e => setfirstName(e.target.value)} />
@@ -49,6 +56,7 @@ const Form = props => {
                     <input type="password" name="confPass" id="confPass" onChange={e => setconfPass(e.target.value)} />
                 </div>
                 <h4>Confirm Password: {confPass}</h4>
+                <input type="submit" value="Create User"/>
             </form>
             {/* <div>
             </div> */}
